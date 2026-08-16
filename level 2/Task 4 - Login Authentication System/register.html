@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="User registration page for Level 2 authentication project."
+    >
+
+    <title>
+        Register | Authentication System
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body data-page="register">
+
+
+    <main class="auth-page">
+
+        <section class="auth-card">
+
+
+            <!-- Left Information Panel -->
+
+            <div class="auth-info">
+
+                <div class="brand">
+                    Secure<span>Auth</span>
+                </div>
+
+                <h1>
+                    Create Your Account
+                </h1>
+
+                <p>
+                    Register to access your protected dashboard.
+                    This project demonstrates client-side
+                    authentication using JavaScript.
+                </p>
+
+
+                <div class="feature-list">
+
+                    <div class="feature-item">
+                        <span>✓</span>
+                        Password validation
+                    </div>
+
+                    <div class="feature-item">
+                        <span>✓</span>
+                        Duplicate account checking
+                    </div>
+
+                    <div class="feature-item">
+                        <span>✓</span>
+                        SHA-256 password hashing
+                    </div>
+
+                    <div class="feature-item">
+                        <span>✓</span>
+                        Protected dashboard
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Registration Form -->
+
+            <div class="auth-form-container">
+
+                <div class="form-heading">
+
+                    <p>
+                        New User
+                    </p>
+
+                    <h2>
+                        Register
+                    </h2>
+
+                </div>
+
+
+                <form
+                    id="register-form"
+                    novalidate
+                >
+
+
+                    <!-- Username -->
+
+                    <div class="form-group">
+
+                        <label for="register-username">
+                            Username
+                        </label>
+
+                        <input
+                            type="text"
+                            id="register-username"
+                            placeholder="Enter your username"
+                            autocomplete="username"
+                            maxlength="30"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="register-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="register-email"
+                            placeholder="example@email.com"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="register-password">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="register-password"
+                                placeholder="Enter your password"
+                                autocomplete="new-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password-button"
+                                data-target="register-password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="password-rules">
+
+                        <p>
+                            Password must contain:
+                        </p>
+
+                        <ul>
+                            <li id="rule-length">
+                                At least 8 characters
+                            </li>
+
+                            <li id="rule-number">
+                                At least 1 number
+                            </li>
+                        </ul>
+
+                    </div>
+
+
+
+                    <!-- Confirm Password -->
+
+                    <div class="form-group">
+
+                        <label for="confirm-password">
+                            Confirm Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="confirm-password"
+                                placeholder="Enter password again"
+                                autocomplete="new-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password-button"
+                                data-target="confirm-password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Message -->
+
+                    <div
+                        id="register-message"
+                        class="form-message"
+                        role="alert"
+                    ></div>
+
+
+
+                    <!-- Register -->
+
+                    <button
+                        type="submit"
+                        class="primary-button"
+                        id="register-button"
+                    >
+                        Register Account
+                    </button>
+
+                </form>
+
+
+                <p class="switch-page">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login here
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

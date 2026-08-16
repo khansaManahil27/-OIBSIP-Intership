@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Login page for Level 2 authentication project."
+    >
+
+    <title>
+        Login | Authentication System
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body data-page="login">
+
+
+    <main class="auth-page">
+
+        <section class="auth-card">
+
+
+            <!-- Information Panel -->
+
+            <div class="auth-info">
+
+                <div class="brand">
+                    Secure<span>Auth</span>
+                </div>
+
+                <h1>
+                    Welcome Back
+                </h1>
+
+                <p>
+                    Login using your registered email address
+                    and password to access the protected dashboard.
+                </p>
+
+
+                <div class="security-box">
+
+                    <div class="security-icon">
+                        🔐
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Protected Access
+                        </h3>
+
+                        <p>
+                            Only authenticated users can access
+                            the dashboard.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Login Form -->
+
+            <div class="auth-form-container">
+
+                <div class="form-heading">
+
+                    <p>
+                        Existing User
+                    </p>
+
+                    <h2>
+                        Login
+                    </h2>
+
+                </div>
+
+
+                <form
+                    id="login-form"
+                    novalidate
+                >
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="login-email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="login-email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                        >
+
+                    </div>
+
+
+
+                    <!-- Password -->
+
+                    <div class="form-group">
+
+                        <label for="login-password">
+                            Password
+                        </label>
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="login-password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                            >
+
+                            <button
+                                type="button"
+                                class="show-password-button"
+                                data-target="login-password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Message -->
+
+                    <div
+                        id="login-message"
+                        class="form-message"
+                        role="alert"
+                    ></div>
+
+
+
+                    <!-- Login -->
+
+                    <button
+                        type="submit"
+                        id="login-button"
+                        class="primary-button"
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+
+                <p class="switch-page">
+
+                    Don't have an account?
+
+                    <a href="register.html">
+                        Register here
+                    </a>
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>

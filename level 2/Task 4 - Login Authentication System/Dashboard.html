@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Protected dashboard for authenticated users."
+    >
+
+    <title>
+        Dashboard | Authentication System
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body data-page="dashboard">
+
+
+    <!-- Navigation -->
+
+    <nav class="dashboard-navbar">
+
+        <div class="brand">
+            Secure<span>Auth</span>
+        </div>
+
+
+        <div class="nav-user">
+
+            <span id="navbar-username">
+                User
+            </span>
+
+            <button
+                type="button"
+                id="logout-button"
+                class="logout-button"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Dashboard -->
+
+    <main class="dashboard-page">
+
+
+        <!-- Welcome Card -->
+
+        <section class="welcome-card">
+
+            <div>
+
+                <p class="welcome-label">
+                    Protected Dashboard
+                </p>
+
+                <h1>
+                    Welcome,
+                    <span id="dashboard-username">
+                        User
+                    </span>!
+                </h1>
+
+                <p>
+                    You successfully logged into the protected
+                    area of the application.
+                </p>
+
+            </div>
+
+
+            <div class="welcome-icon">
+                ✓
+            </div>
+
+        </section>
+
+
+
+        <!-- Dashboard Information -->
+
+        <section class="dashboard-grid">
+
+
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-icon">
+                    👤
+                </div>
+
+                <h2>
+                    Account
+                </h2>
+
+                <p class="card-label">
+                    Username
+                </p>
+
+                <p
+                    class="card-value"
+                    id="account-username"
+                >
+                    -
+                </p>
+
+
+                <p class="card-label">
+                    Email
+                </p>
+
+                <p
+                    class="card-value"
+                    id="account-email"
+                >
+                    -
+                </p>
+
+            </article>
+
+
+
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-icon">
+                    🔐
+                </div>
+
+                <h2>
+                    Authentication
+                </h2>
+
+                <p>
+                    Your login session is active.
+                    Attempting to access this page without
+                    logging in will redirect the visitor
+                    to the login page.
+                </p>
+
+                <span class="status-badge">
+                    ● Authenticated
+                </span>
+
+            </article>
+
+
+
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-icon">
+                    🛡️
+                </div>
+
+                <h2>
+                    Password Security
+                </h2>
+
+                <p>
+                    The demonstration application stores
+                    a salted SHA-256 password hash instead
+                    of saving your password as readable
+                    plain text.
+                </p>
+
+            </article>
+
+
+
+            <article class="dashboard-card">
+
+                <div class="dashboard-card-icon">
+                    💻
+                </div>
+
+                <h2>
+                    Project Stack
+                </h2>
+
+                <div class="technology-tags">
+
+                    <span>
+                        HTML5
+                    </span>
+
+                    <span>
+                        CSS3
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        localStorage
+                    </span>
+
+                    <span>
+                        Web Crypto API
+                    </span>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+
+
+        <!-- Important Notice -->
+
+        <section class="notice-card">
+
+            <h2>
+                Internship Demonstration
+            </h2>
+
+            <p>
+                This project demonstrates authentication concepts
+                entirely in the browser. A real production
+                authentication system should use a secure backend,
+                server-side password hashing and secure session
+                cookies.
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <footer class="dashboard-footer">
+
+        Level 2 · Task 4 · Login Authentication System
+
+    </footer>
+
+
+    <script src="auth.js"></script>
+
+</body>
+
+</html>
