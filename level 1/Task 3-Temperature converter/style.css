@@ -1,0 +1,522 @@
+
+/* ============================== */
+/* RESET */
+/* ============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ============================== */
+/* GENERAL PAGE */
+/* ============================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #e0f2fe,
+        #f8fafc
+    );
+
+    color: #1e293b;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+}
+
+
+/* ============================== */
+/* PAGE WRAPPER */
+/* ============================== */
+
+.page-wrapper {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 50px 20px;
+}
+
+
+/* ============================== */
+/* CONVERTER CARD */
+/* ============================== */
+
+.converter-card {
+    width: 100%;
+
+    max-width: 850px;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px
+        rgba(15, 23, 42, 0.15);
+}
+
+
+/* ============================== */
+/* HEADER */
+/* ============================== */
+
+.converter-header {
+    text-align: center;
+
+    padding: 45px 30px;
+
+    background-color: #0f172a;
+
+    color: white;
+}
+
+
+.temperature-icon {
+    font-size: 52px;
+
+    margin-bottom: 10px;
+}
+
+
+.converter-header h1 {
+    font-size: 38px;
+
+    margin-bottom: 10px;
+}
+
+
+.converter-header p {
+    max-width: 550px;
+
+    margin: auto;
+
+    color: #cbd5e1;
+
+    font-size: 16px;
+}
+
+
+/* ============================== */
+/* FORM */
+/* ============================== */
+
+.converter-form {
+    padding: 40px;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #0f172a;
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    color: #1e293b;
+
+    background-color: #f8fafc;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0284c7;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(2, 132, 199, 0.12);
+}
+
+
+/* ============================== */
+/* ERROR MESSAGE */
+/* ============================== */
+
+.error-message {
+    display: none;
+
+    margin-bottom: 20px;
+
+    padding: 12px 15px;
+
+    border-radius: 7px;
+
+    background-color: #fee2e2;
+
+    border: 1px solid #fecaca;
+
+    color: #b91c1c;
+
+    font-size: 14px;
+}
+
+
+/* ============================== */
+/* BUTTONS */
+/* ============================== */
+
+.convert-button,
+.reset-button {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 14px 20px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+
+.convert-button {
+    background-color: #0284c7;
+
+    color: white;
+
+    margin-bottom: 12px;
+}
+
+
+.convert-button:hover {
+    background-color: #0369a1;
+
+    transform: translateY(-2px);
+}
+
+
+.reset-button {
+    background-color: #e2e8f0;
+
+    color: #334155;
+}
+
+
+.reset-button:hover {
+    background-color: #cbd5e1;
+
+    transform: translateY(-2px);
+}
+
+
+/* ============================== */
+/* RESULT SECTION */
+/* ============================== */
+
+.result-section {
+    padding: 40px;
+
+    background-color: #f8fafc;
+
+    border-top: 1px solid #e2e8f0;
+}
+
+
+.result-section h2 {
+    text-align: center;
+
+    color: #0f172a;
+
+    font-size: 27px;
+
+    margin-bottom: 30px;
+}
+
+
+.results-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+/* ============================== */
+/* RESULT CARD */
+/* ============================== */
+
+.result-card {
+    text-align: center;
+
+    background-color: white;
+
+    padding: 28px 15px;
+
+    border-radius: 12px;
+
+    border: 1px solid #e2e8f0;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.result-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(15, 23, 42, 0.1);
+}
+
+
+.result-icon {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+
+.result-card h3 {
+    color: #475569;
+
+    font-size: 17px;
+
+    margin-bottom: 10px;
+}
+
+
+.result-card p {
+    color: #0284c7;
+
+    font-size: 30px;
+
+    font-weight: bold;
+
+    line-height: 1.2;
+}
+
+
+.result-card span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+
+/* ============================== */
+/* INFORMATION BOX */
+/* ============================== */
+
+.information-box {
+    padding: 30px 40px;
+
+    text-align: center;
+
+    background-color: #f0f9ff;
+
+    border-top: 1px solid #bae6fd;
+}
+
+
+.information-box h3 {
+    color: #0369a1;
+
+    font-size: 18px;
+
+    margin-bottom: 15px;
+}
+
+
+.limits {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+
+.limits span {
+    background-color: white;
+
+    color: #475569;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    font-size: 14px;
+
+    border: 1px solid #bae6fd;
+}
+
+
+/* ============================== */
+/* FOOTER */
+/* ============================== */
+
+.footer {
+    text-align: center;
+
+    background-color: #0f172a;
+
+    padding: 20px;
+
+    color: #94a3b8;
+
+    font-size: 13px;
+}
+
+
+/* ============================== */
+/* TABLET */
+/* ============================== */
+
+@media (max-width: 768px) {
+
+    .page-wrapper {
+        padding: 30px 15px;
+    }
+
+
+    .converter-header {
+        padding: 35px 20px;
+    }
+
+
+    .converter-header h1 {
+        font-size: 31px;
+    }
+
+
+    .converter-form {
+        padding: 30px 25px;
+    }
+
+
+    .result-section {
+        padding: 35px 25px;
+    }
+
+
+    .results-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .information-box {
+        padding: 25px;
+    }
+
+
+    .limits {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+}
+
+
+/* ============================== */
+/* SMALL MOBILE */
+/* ============================== */
+
+@media (max-width: 480px) {
+
+    .page-wrapper {
+        padding: 15px 10px;
+    }
+
+
+    .converter-card {
+        border-radius: 12px;
+    }
+
+
+    .temperature-icon {
+        font-size: 42px;
+    }
+
+
+    .converter-header h1 {
+        font-size: 27px;
+    }
+
+
+    .converter-header p {
+        font-size: 14px;
+    }
+
+
+    .converter-form {
+        padding: 25px 18px;
+    }
+
+
+    .result-section {
+        padding: 30px 18px;
+    }
+
+
+    .result-card p {
+        font-size: 26px;
+    }
+
+}
