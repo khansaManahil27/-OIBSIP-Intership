@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="A responsive browser-based calculator built using HTML, CSS and Vanilla JavaScript."
+    >
+
+    <title>Calculator | Level 2 Task 1</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="page-wrapper">
+
+        <section class="calculator">
+
+            <!-- Calculator Header -->
+            <div class="calculator-header">
+                <h1>Calculator</h1>
+
+                <p>
+                    Basic arithmetic calculator using Vanilla JavaScript
+                </p>
+            </div>
+
+
+            <!-- Calculator Display -->
+            <div class="display-container">
+
+                <div
+                    id="previous-display"
+                    class="previous-display"
+                ></div>
+
+                <div
+                    id="current-display"
+                    class="current-display"
+                    aria-live="polite"
+                >
+                    0
+                </div>
+
+            </div>
+
+
+            <!-- Calculator Buttons -->
+            <div class="calculator-buttons">
+
+                <!-- Clear -->
+                <button
+                    type="button"
+                    class="button clear-button"
+                    data-action="clear"
+                >
+                    C
+                </button>
+
+
+                <!-- Backspace -->
+                <button
+                    type="button"
+                    class="button utility-button"
+                    data-action="backspace"
+                >
+                    ⌫
+                </button>
+
+
+                <!-- Divide -->
+                <button
+                    type="button"
+                    class="button operator-button"
+                    data-operator="divide"
+                >
+                    ÷
+                </button>
+
+
+                <!-- Multiply -->
+                <button
+                    type="button"
+                    class="button operator-button"
+                    data-operator="multiply"
+                >
+                    ×
+                </button>
+
+
+                <!-- 7 -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="7"
+                >
+                    7
+                </button>
+
+
+                <!-- 8 -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="8"
+                >
+                    8
+                </button>
+
+
+                <!-- 9 -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="9"
+                >
+                    9
+                </button>
+
+
+                <!-- Subtract -->
+                <button
+                    type="button"
+                    class="button operator-button"
+                    data-operator="subtract"
+                >
+                    −
+                </button>
+
+
+                <!-- 4 -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="4"
+                >
+                    4
+                </button>
+
+
+                <!-- 5 -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="5"
+                >
+                    5
+                </button>
+
+
+                <!-- 6 -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="6"
+                >
+                    6
+                </button>
+
+
+                <!-- Add -->
+                <button
+                    type="button"
+                    class="button operator-button"
+                    data-operator="add"
+                >
+                    +
+                </button>
+
+
+                <!-- 1 -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="1"
+                >
+                    1
+                </button>
+
+
+                <!-- 2 -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="2"
+                >
+                    2
+                </button>
+
+
+                <!-- 3 -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="3"
+                >
+                    3
+                </button>
+
+
+                <!-- Equals -->
+                <button
+                    type="button"
+                    class="button equals-button"
+                    data-action="equals"
+                >
+                    =
+                </button>
+
+
+                <!-- Zero -->
+                <button
+                    type="button"
+                    class="button number-button zero-button"
+                    data-number="0"
+                >
+                    0
+                </button>
+
+
+                <!-- Decimal -->
+                <button
+                    type="button"
+                    class="button number-button"
+                    data-number="."
+                >
+                    .
+                </button>
+
+            </div>
+
+
+            <!-- Error Area -->
+            <div
+                id="error-message"
+                class="error-message"
+                role="alert"
+            ></div>
+
+
+            <!-- Footer -->
+            <footer class="calculator-footer">
+                Level 2 · Task 1 · Calculator
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
