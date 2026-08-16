@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Interactive To-Do Web App built using HTML, CSS and Vanilla JavaScript."
+    >
+
+    <title>
+        To-Do Web App | Level 2 Task 3
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- ================================= -->
+    <!-- MAIN PAGE -->
+    <!-- ================================= -->
+
+    <main class="page-wrapper">
+
+        <section class="todo-app">
+
+
+            <!-- ================================= -->
+            <!-- HEADER -->
+            <!-- ================================= -->
+
+            <header class="app-header">
+
+                <div class="header-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <h1>
+                        My To-Do List
+                    </h1>
+
+                    <p>
+                        Organize your tasks and stay productive.
+                    </p>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- ================================= -->
+            <!-- ADD TASK -->
+            <!-- ================================= -->
+
+            <section class="add-task-section">
+
+                <label
+                    for="task-input"
+                    class="input-label"
+                >
+                    Add a New Task
+                </label>
+
+
+                <div class="task-input-container">
+
+                    <input
+                        type="text"
+                        id="task-input"
+                        placeholder="What do you need to do?"
+                        maxlength="120"
+                    >
+
+                    <button
+                        type="button"
+                        id="add-task-button"
+                    >
+                        + Add Task
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="error-message"
+                    class="error-message"
+                    role="alert"
+                ></div>
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- DASHBOARD COUNTERS -->
+            <!-- ================================= -->
+
+            <section class="task-summary">
+
+                <div class="summary-card pending-summary">
+
+                    <span class="summary-icon">
+                        ⏳
+                    </span>
+
+                    <div>
+
+                        <span
+                            id="pending-summary-count"
+                            class="summary-number"
+                        >
+                            0
+                        </span>
+
+                        <p>
+                            Pending
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="summary-card completed-summary">
+
+                    <span class="summary-icon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <span
+                            id="completed-summary-count"
+                            class="summary-number"
+                        >
+                            0
+                        </span>
+
+                        <p>
+                            Completed
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- PENDING TASKS -->
+            <!-- ================================= -->
+
+            <section class="task-section">
+
+                <div class="task-section-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            Things To Do
+                        </p>
+
+                        <h2>
+                            Pending Tasks
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        id="pending-count"
+                        class="count-badge pending-badge"
+                    >
+                        0 pending
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="pending-list"
+                    class="task-list"
+                ></div>
+
+
+                <div
+                    id="pending-empty"
+                    class="empty-state"
+                >
+
+                    <div class="empty-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        No pending tasks
+                    </h3>
+
+                    <p>
+                        Add a task above to get started.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- COMPLETED TASKS -->
+            <!-- ================================= -->
+
+            <section class="task-section completed-section">
+
+                <div class="task-section-header">
+
+                    <div>
+
+                        <p class="section-label">
+                            Finished Work
+                        </p>
+
+                        <h2>
+                            Completed Tasks
+                        </h2>
+
+                    </div>
+
+
+                    <span
+                        id="completed-count"
+                        class="count-badge completed-badge"
+                    >
+                        0 completed
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="completed-list"
+                    class="task-list"
+                ></div>
+
+
+                <div
+                    id="completed-empty"
+                    class="empty-state"
+                >
+
+                    <div class="empty-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        Nothing completed yet
+                    </h3>
+
+                    <p>
+                        Completed tasks will appear here.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================================= -->
+            <!-- FOOTER -->
+            <!-- ================================= -->
+
+            <footer class="app-footer">
+
+                <p>
+                    Level 2 · Task 3 · To-Do Web App
+                </p>
+
+                <p>
+                    HTML · CSS · JavaScript · localStorage
+                </p>
+
+            </footer>
+
+
+        </section>
+
+    </main>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
